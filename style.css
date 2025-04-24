@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+
+ 
+}
+.hero{
+  height: 100vh;
+  background: linear-gradient(to top, #818CF8, #ffffff);
+  
+}
+.HeaderNavigation{
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  /* background-color: pink; */
+  margin: auto;
+}
+.image{
+padding-top: 8px;
+}
+.list{
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  font-weight: 700;
+  font-size: 16px;
+color: #475569;
+line-height: 22px;
+}
+.button{
+  gap: 8px;
+}
+.btn{
+ border-radius: 80px; 
+ padding: 12px 20px;
+ border: 1px solid #CBD5E1 ;
+ background-color: #ffff;
+ font-weight: 700;
+ font-size: 16px;
+color: #475569;
+line-height: 22px;
+margin-left: 4px;
+}
+.btn:hover{
+ background-color: #4F46E5;
+ color: #ffff;
+ transform: scale(1.05);
+ transition:  0.3s ease;
+}
+
+
