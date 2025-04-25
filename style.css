@@ -8,7 +8,10 @@
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  margin: 0;
+  margin: 0 auto;
+
+  background-color: #F8FAFC;
+
 }
 .hero {
   background: linear-gradient(to top, #818cf8, #ffffff);
@@ -168,7 +171,7 @@ body {
   color: #1e293b;
 }
 .features-p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: #475569;
   padding: 28px;
@@ -282,10 +285,16 @@ display: flex;
 margin: auto;
 } 
 */
+.bgwhite{
+  background-color: #ffff;
+padding: 50px 100px;
+  margin: 0 auto;
+}
 .features-section {
   width: 90%;
   margin: 0 auto;
   padding: 60px 0px;
+  
 }
 .features-subtitle {
   text-align: left;
@@ -356,6 +365,7 @@ margin: auto;
 }
 .testmonial {
   text-align: center;
+  padding: 70px 0;
 }
 .card {
   text-align: left;
@@ -364,17 +374,16 @@ margin: auto;
   width: 90%;
   margin: 0 auto;
   gap: 30px;
-  /* background-color: palevioletred; */
+
   padding: 20px 0;
 }
 .single-card {
-  /* background-color: #64748b; */
   padding: 30px;
   border-radius: 20px;
- 
+
   border: 1px solid #d7e3f3;
 }
-.card-text{
+.card-text {
   font-size: 18px;
   font-weight: 400;
   color: #475569;
@@ -392,12 +401,158 @@ margin: auto;
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
-  
 }
 .avater_text p {
   font-size: 16px;
   font-weight: 400;
   color: #475569;
+}
+.contact_section{
+  /* padding: 100px ; */
+  width: 90%;
+  margin: 0 auto;
+  gap: 30px;
+}
+.contact{
+
+}
+.contact_subtitle{
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4f46e5;
+  line-height: 20px;
+  padding: 5px 5px;
+  border-radius: 30px;
+  background: #eef2ff;
+  width: 150px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+/* styles.css */
+
+.location {
+  display: grid;
+ grid-template-columns: repeat(4,1fr);
+  gap: 24px;
+  padding: 20px 0;
+  text-align: center;
+}
+.location-item{
+  border: 1px solid #e0e0e0;
+}
+
+.location-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.location-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.location-item svg {
+  
+  color: #4a90e2;
+  width: 32px;
+  height: 32px;
+}
+
+.location-item h3 {
+  font-size: 20px;
+  margin: 10px 0 6px;
+  color: #1E293B;
+  padding: 10px 0px;
+  
+}
+
+.location-item p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+.FAQ-content{
+ 
+}
+.FAQ{
+  /* width: 400px; */
+  /* margin: 0 auto; */
+
+  max-width: 800px; 
+  margin: 0 auto;
+  text-align: center;
+  padding: 70px 0;
+
+}
+.question-content {
+ display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.question-content:hover {
+  background-color: #f1f5f9;
+}
+
+.question-svg svg {
+  width: 28px;
+  height: 28px;
+  fill: #1e293b;
+  display: inline-block;
+}
+.icon-svg {
+  display: inline-block;
+  margin-left:  20px;
+  
+}
+
+
+
+.question-text p {
+  margin: 0;
+  color: #1e293b;
+  font-size: 16px;
+  line-height: 1.5;
+  text-wrap:wrap;
+}
+
+.question-hidden {
+  display: none;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.question-content.active .question-hidden {
+  display: block;
+}
+
+.question-content svg:last-child {
+  transition: transform 0.3s ease;
+}
+
+.question-content.active svg:last-child {
+  transform: rotate(180deg);
+}
+
+.CTA{
+  background-color: #EEF2FF;
 }
 
 @media (max-width: 768px) {
