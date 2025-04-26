@@ -14,6 +14,7 @@ body {
 }
 .hero {
   background: linear-gradient(to top, #818cf8, #ffffff);
+  position: relative;
 }
 .HeaderNavigation {
   padding-top: 10px;
@@ -369,6 +370,9 @@ margin: auto;
   text-align: center;
   padding: 70px 0;
 }
+.loadbutton {
+  display: none;
+}
 .card {
   text-align: left;
   display: grid;
@@ -545,18 +549,8 @@ margin: auto;
   transform: rotate(180deg);
 }
 
-.CTA {
-  background-color: #eef2ff;
-}
-.CTA-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 64px 112px;
-  margin: 0 auto;
-  /* gap: 40px;  */
-  position: relative;
-}
+
+
 .cta-text {
   width: 50%;
 }
@@ -574,17 +568,63 @@ margin: auto;
   padding: 15px 0;
   color: #475569;
 }
+
+
+
+
+
+.CTA {
+  background-color: #eef2ff;
+  position: relative;
+  flex-wrap: wrap;
+}
+.CTA-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 64px 112px;
+  margin: 0 auto;
+  overflow: hidden; 
+}
+
 .cta-images {
   width: 50%;
   display: flex;
-  gap: 40px; /* space between images */
+  flex-direction: column;
   align-items: center;
+ 
+  position: relative;
+ height: 500px; /* fix height to control it */
+
 }
+
+.cta-img-1 {
+ 
+  width: 100%;
+  height: 700px;
+  object-fit: contain;
+  position: relative;
+  top: 20px;
+  bottom: -220px; 
+  right: -90px; 
+  z-index: 2;
+}
+
 .cta-img-2 {
+ 
+  width: 320px;
+  height: 700px;
+  object-fit: contain;
   position: absolute;
-  top: 0px;
-  right: 320px;
+  top: -38%; /* cut 10% from top */
+  right: -20%; /* cut 10% from right */
+  z-index: 1;
 }
+
+
+
+
+
 footer {
   padding: 96px 112px;
 }
@@ -686,62 +726,38 @@ footer {
     font-size: 14px;
     white-space: nowrap;
   }
-}
 
-  .img-desktop {
-    width: 100%;
-    display: flex;
-    height: auto;
-    padding-bottom: 100px;
-    position: relative;
-  }
 
-  
-  .img-screen {
-    position: absolute;
-    top: 120px;
-    right: 100px;
-    min-height: auto;
-    width: 20%;
-    padding-bottom: 400px;
-  }
 
-  @media (max-width: 468px) {
-    .social-proof {
-      margin: 0 auto;
 
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 4px;
-    
-    }
-  
-    .social-proof > div {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); 
-      gap: 1rem;
-      max-width: 100%;
-    
-    }
-  
-    .social-proof svg {
-      width: 135px;
-      height: auto;
-      
-    }
-  }
+
  
-  
-  /* opore ekhane amr kaj  */
+  .social-proof {
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+  }
+
+  .social-proof > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .social-proof svg {
+    width: 135px;
+    height: auto;
+  }
 
   .Features {
     padding: 50px 0px;
     display: block;
     width: 100%;
-
-
   }
   .bgwhite {
     background-color: #ffff;
@@ -751,8 +767,7 @@ footer {
 
   .feature-card {
     grid-template-columns: 1fr;
- justify-content: center;
-
+    justify-content: center;
   }
 
   .features-container {
@@ -768,43 +783,193 @@ footer {
     height: auto;
   }
 
+  .stat-title {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 38px;
+    text-wrap: wrap;
+  }
+  .stat-grid {
+    display: block;
+  }
+  .stat-box {
+    padding: 30px 30px;
+    border-bottom: 2px solid #cbd5e1;
+  }
+  .stat-title {
+    padding: 20px 0px;
+    text-align: left;
+    font-size: 30px;
+  }
+
   .card {
     grid-template-columns: 1fr;
   }
-
-  .location {
-    grid-template-columns: 1fr;
+  .loadbutton {
+    display: block;
+    width: 90%;
+    color: white;
+    border-radius: 80px;
+    padding: 12px 20px;
+    border: 1px solid #cbd5e1;
+    background-color: #4f46e5;
+    font-weight: 700;
+    font-size: 16px;
+   
+    line-height: 22px;
+    margin: 10px auto ;
   }
+.contact_section{
+  
+  padding: 64px 0;
+}
 
-  .CTA-container {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 20px;
-  }
+.location {
+  grid-template-columns: 1fr;
+}
+.img-desktop {
+  width: 100%;
+  display: flex;
+  height: auto;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.img-screen {
+  position: absolute;
+  top: 120px;
+  right: 100px;
+  min-height: auto;
+  width: 20%;
+  padding-bottom: 400px;
+}
+
+  
+
 
   .cta-text {
     width: 100%;
+
   }
+  .cta-text h1{
+    font-size: 36px;
+  }
+  .cta-text P{
+    font-size: 16px;
+    font-weight: 400;
+  }
+ 
+  .btn{
+    width: 100%;
+    margin: 10px auto;
+  }
+  .btn:hover {
+    background-color: #4f46e5;
+    color: #ffff;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+  }
+  .cta-text h1 {
+    font-size: 24px;
+  }
+
+  .cta-text p {
+    font-size: 13px;
+  }
+.CTA-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    position: relative;
+    height: auto;
+  }
+  .cta-images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    gap: 30px;
+    position: relative;
+  }
+
+  .cta-img-1 {
+ 
+   position: relative;
+   left:50px;
+   top: 70px;
+   
+    object-fit: scale-down;
+  }
+
+  .cta-img-2 {
+    height: 300px;
+    position: absolute;
+    right:80px;
+    margin-bottom: 30px;
+    position: initial;
+  }
+
+/* opore ekhane amr kaj  */
   footer {
     padding: 30px 20px;
     text-align: center;
+    background-color: #F8FAFC;
+    
   }
 
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-  }
+
 
   .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
     width: 100%;
   }
-
-  .footer-section h3 {
+  
+  .footer-section > div {
+    width: 90%; /* two columns on medium screens */
+  }
+  
+  .footer-title {
+    font-size: 18px;
     margin-bottom: 10px;
   }
-
-  .footer-section ul {
+  
+  .footer-links {
+    list-style: none;
     padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 14px;
+  }
+  
+  /* Footer bottom part */
+  .footername {
+    text-align: center;
+    padding: 20px;
+    background-color: #F8FAFC;
+  }
+  
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+ 
+  .footer-text {
+    font-size: 12px;
+    color: #64748b; 
+    order: 2;
+  }
+  .scrollToTop{
+    order: 3;
   }
 }
 /* @media (max-width:768) {
